@@ -32,4 +32,4 @@ fi
 # Main
 #
 
-ssh destination "cp -r ""$INPUT_SOURCE"" $INPUT_DESTINATION; pm2 restart all"
+ssh destination "cp -r ""$INPUT_SOURCE""/* $INPUT_DESTINATION; pm2 restart all"
