@@ -35,6 +35,12 @@ inputs:
   destination:
     description: 'Filepath of destination'
     required: true
+  npm:
+    description: 'Set to 1 if npm and not yarn is being used'
+    default: '0'
+  command:
+    description: 'The npm script that will be run for the build operation'
+    default: 'build'
 runs:
   using: 'docker'
   image: 'Dockerfile'
