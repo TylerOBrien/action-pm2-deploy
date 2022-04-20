@@ -32,5 +32,6 @@ fi
 # Main
 #
 
+ssh destination "rm -f ""$INPUT_SOURCE""/exclusions"
 ssh destination "cp -r ""$INPUT_SOURCE""/* $INPUT_DESTINATION"
 ssh destination "pm2 restart all"
