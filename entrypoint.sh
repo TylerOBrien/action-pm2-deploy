@@ -33,12 +33,5 @@ fi
 #
 
 ssh destination "rm -f ""$INPUT_SOURCE""/exclusions"
-
-if [ "$INPUT_NPM" != "1" ]; then
-    ssh destination "cd ""$INPUT_SOURCE""; yarn install; yarn ""$INPUT_COMMAND"""
-else
-    ssh destination "cd ""$INPUT_SOURCE""; npm install; npm run ""$INPUT_COMMAND"""
-fi
-
 ssh destination "cp -r ""$INPUT_SOURCE""/* $INPUT_DESTINATION"
 ssh destination "pm2 restart all"
